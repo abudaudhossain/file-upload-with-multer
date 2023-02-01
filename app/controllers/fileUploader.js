@@ -12,12 +12,12 @@ module.exports = {
             console.log(error)
         }
     },
-    showResume: (req, res) => {
+    showFile: (req, res) => {
         try {
             // var appRoot = ;
             console.log("rort dir", req.rootDir)
-            console.log('MY DERSAFJDLSK', __dirname + req.path)
-            res.sendFile(req.rootDir + "/storage/resume/" + req.params.fileName);
+            console.log(req.rootDir + "/storage/" + req.params.fileName)
+            res.sendFile(req.rootDir + "/storage/" + req.params.fileName);
         } catch (error) {
             console.log(error)
         }
